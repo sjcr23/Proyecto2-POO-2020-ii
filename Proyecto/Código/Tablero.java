@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-
+package application;
 public class Tablero {
 	
 	private Coordenada casillas[];

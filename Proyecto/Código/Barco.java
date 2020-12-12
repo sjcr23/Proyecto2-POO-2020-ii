@@ -22,7 +22,15 @@ public class Barco {
 		this.condicion = false;
 	}
 
-
+	public boolean verificarEstado(int largo, int cantidadDeGolpes) {
+        if(cantidadDeGolpes < largo) {
+            condicion = true;//todavía el barco sigue en pie 
+        }else if (cantidadDeGolpes > largo) {
+            condicion = false; //el barco ya se hundió
+        }
+        return condicion;
+    }
+	
 	public String getTipo() {
 		return tipo;
 	}
