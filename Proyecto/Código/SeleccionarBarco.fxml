@@ -45,6 +45,7 @@
          </rowConstraints>
       </GridPane>
       <Button layoutX="344.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-border-color: white;" text="Siguiente" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="guardarPosicion" layoutX="244.0" layoutY="390.0" mnemonicParsing="false" onAction="#ponerImagen" style="-fx-background-color: black; -fx-border-color: white;" text="Guardar Posicion" textAlignment="CENTER" textFill="WHITE" />
       <Text fill="WHITE" layoutX="433.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
@@ -200,7 +201,6 @@
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
       </Text>
-      <Button layoutX="244.0" layoutY="390.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-border-color: white;" text="Guardar Posicion" textAlignment="CENTER" textFill="WHITE" />
       <ImageView fx:id="fragata1" fitHeight="20.0" fitWidth="25.0" layoutX="99.0" layoutY="268.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/fragata.png" />
@@ -215,5 +215,50 @@
       <ComboBox fx:id="EjeX" layoutX="67.0" layoutY="381.0" prefWidth="150.0" promptText="EJEX" />
       <ComboBox fx:id="EjeY" layoutX="67.0" layoutY="427.0" prefWidth="150.0" promptText="EJEY" />
       <ComboBox fx:id="posicion" layoutX="67.0" layoutY="475.0" prefWidth="150.0" promptText="ORIENTACION" />
+      <ImageView fitHeight="30.0" fitWidth="88.0" layoutX="84.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/porta_aviones.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="68.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/submarino.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="142.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/submarino.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="112.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/submarino.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="99.0" layoutY="268.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/fragata.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="148.0" layoutY="268.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/fragata.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="355.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/destructor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="437.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/destructor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="395.0" layoutY="75.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/destructor.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

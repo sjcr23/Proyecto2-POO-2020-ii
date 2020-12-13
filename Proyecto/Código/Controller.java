@@ -35,19 +35,20 @@ public class Controller implements Initializable {
 	
 	@FXML
 	void crearPartida(ActionEvent evento) {
-		
+
 		try {
-			FXMLLoader ventanaNuevaPartida = new FXMLLoader(getClass().getResource("SeleccionarBarco.fxml"));
-			Parent root = (Parent) ventanaNuevaPartida.load();
-			CONTROLADOR2 submarino = (CONTROLADOR2) ventanaNuevaPartida.getController();
-			submarino.setMenu(menu);
+
+			Parent root = FXMLLoader.load(getClass().getResource("SeleccionarBarco.fxml"));
+
 			Stage primaryStage = new Stage();
 			primaryStage.setTitle("Battleship");
-			primaryStage.setScene(new Scene(root));
+			primaryStage.setScene(new Scene(root, 750, 600));
 			primaryStage.show();
+			
+
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			System.out.println("1");
 		}
 		
 		

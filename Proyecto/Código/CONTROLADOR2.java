@@ -1,6 +1,7 @@
 package application;
 
-import java.awt.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -9,11 +10,15 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.MenuButton;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 public class CONTROLADOR2 implements Initializable {
+	
+
+	@FXML
+	private Button guardarPosicion;
+	
 	@FXML
 	private ComboBox<ImageView> botonBarco;
 	
@@ -58,17 +63,66 @@ public class CONTROLADOR2 implements Initializable {
 	
 	@FXML
 	private GridPane tablero;
+	
+	public ImageView rotarFicha(ImageView barco) {
+		barco.setRotate(barco.getRotate() + 90);
+		
+		if(barco.equals(portaAviones)) {
+			barco.setTranslateY(30);
+			barco.setTranslateX(-30);
+			return barco;
+			
+		}
+		
+		else if(barco.equals(submarino1) || barco.equals(submarino2) || 
+					barco.equals(submarino3)) {
+			
+			barco.setTranslateX(-15);
+			barco.setTranslateY(15);
+			return barco;
+		}
+		
+		else if(barco.equals(destructor1) || barco.equals(destructro2) || 
+					barco.equals(desctructor3)) {
+			
+			
+			barco.setTranslateX(-15);
+			barco.setTranslateY(15);
+			return barco;
+			
+		}
+		
+		return barco;
+	}
 
 	@FXML
-	public void ponerImagen() {
+	public void ponerImagen(ActionEvent eventoS) {
 		ImageView barcoSeleccionado = botonBarco.getSelectionModel().getSelectedItem();
-		int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString());
-		int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString());
+		botonBarco.getItems().remove(barcoSeleccionado);
+		int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
+		int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
 		String orientacion = posicion.getSelectionModel().getSelectedItem().toString();
 		
+		
+		if(orientacion.equals("Vertical")) {
+			
+			rotarFicha(barcoSeleccionado);
+	
+		}
+		
+		
+		tablero.add(barcoSeleccionado, ejex, ejey);
+		barcoSeleccionado.toBack();
+		
+		
+		if(botonBarco.getItems().isEmpty()) {
+			generarBarcos();
+		}
 	}
 	
-	
+	public GridPane getTablero() {
+		return tablero;
+	}
 	
 	
 	Controller menu;
@@ -79,14 +133,22 @@ public class CONTROLADOR2 implements Initializable {
 		
 	}
 	
-	
+
+	public void generarBarcos(){
+		
+		ObservableList<ImageView> barcosJugador = FXCollections.observableArrayList(portaAviones,submarino1,submarino2,
+				submarino3,destructor1,destructro2,desctructor3,fragata1,fragata2);
+		botonBarco.setItems(barcosJugador);
+		
+
+	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
-		ObservableList<ImageView> barcos = FXCollections.observableArrayList(portaAviones,submarino1,submarino2,
-				submarino3,destructor1,destructro2,desctructor3,fragata1,fragata2);
-		botonBarco.setItems(barcos);
+		
+		generarBarcos();
+		
 		
 		ObservableList<String> ejes = FXCollections.observableArrayList("1", "2", "3","4", "5", "6", "7", "8", "9","10");
 		EjeX.setItems(ejes);
