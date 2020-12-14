@@ -3,6 +3,7 @@ package application;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -14,7 +15,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 public class CONTROLADOR2 implements Initializable {
-	
+	private Tablero tablero1;
+	private Tablero tablero2;
 
 	@FXML
 	private Button guardarPosicion;
@@ -68,8 +70,8 @@ public class CONTROLADOR2 implements Initializable {
 		barco.setRotate(barco.getRotate() + 90);
 		
 		if(barco.equals(portaAviones)) {
-			barco.setTranslateY(30);
-			barco.setTranslateX(-30);
+			barco.setTranslateY(-15);
+			barco.setTranslateX(12);
 			return barco;
 			
 		}
@@ -77,8 +79,8 @@ public class CONTROLADOR2 implements Initializable {
 		else if(barco.equals(submarino1) || barco.equals(submarino2) || 
 					barco.equals(submarino3)) {
 			
-			barco.setTranslateX(-15);
-			barco.setTranslateY(15);
+			barco.setTranslateX(-30);
+			barco.setTranslateY(30);
 			return barco;
 		}
 		
@@ -97,6 +99,8 @@ public class CONTROLADOR2 implements Initializable {
 
 	@FXML
 	public void ponerImagen(ActionEvent eventoS) {
+		ArrayList<Coordenada> Casillas = this.tablero1.getCasillas();
+		Coordenada casilla;
 		ImageView barcoSeleccionado = botonBarco.getSelectionModel().getSelectedItem();
 		botonBarco.getItems().remove(barcoSeleccionado);
 		int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
@@ -118,8 +122,59 @@ public class CONTROLADOR2 implements Initializable {
 		if(botonBarco.getItems().isEmpty()) {
 			generarBarcos();
 		}
+		ArrayList<ArrayList<Integer>> CoordenadasOcupadas = obtenerCoordenadas(ejey, ejex, orientacion, barcoSeleccionado);
+		
+		for(int i=0; i<100; i=i+1) {
+			
+			casilla = Casillas.get(i);
+			for(int k = 0; k< CoordenadasOcupadas.size();k=k+1) {
+				System.out.println("casilla"+casilla.getCoordenadas().toString());
+				System.out.println("coordenadasOcupadas"+CoordenadasOcupadas.toString());
+				if(casilla.getCoordenadas().toString().equals(CoordenadasOcupadas.get(k).toString())) {
+					casilla.setEstado();
+					System.out.println(casilla.toString());	
+				}
+				
+			}
+		}
+		
+		
 	}
 	
+	public ComboBox<ImageView> getBotonBarco() {
+		return botonBarco;
+	}
+
+	public void setBotonBarco(ComboBox<ImageView> botonBarco) {
+		this.botonBarco = botonBarco;
+	}
+
+	public int getEjeX() {
+		int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
+		return ejex;
+	}
+
+	public void setEjeX(ComboBox<String> ejeX) {
+		EjeX = ejeX;
+	}
+
+	public int getEjeY() {
+		int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
+		return ejey;
+	}
+
+	public void setEjeY(ComboBox<String> ejeY) {
+		EjeY = ejeY;
+	}
+
+	public ComboBox<String> getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(ComboBox<String> posicion) {
+		this.posicion = posicion;
+	}
+
 	public GridPane getTablero() {
 		return tablero;
 	}
@@ -158,8 +213,109 @@ public class CONTROLADOR2 implements Initializable {
 
 		ObservableList<String> orientacion = FXCollections.observableArrayList("Horizontal", "Vertical");
 		posicion.setItems(orientacion);
+		
+		this.tablero1 = new Tablero();
+		tablero1.setCoordenadas();
+		
+		this.tablero2 = new Tablero();
+		tablero2.setCoordenadas();
+		
 	}
-	
+	//Pone las casillas, que los barcos cubren 
+	public ArrayList<ArrayList<Integer>> obtenerCoordenadas(int x, int y, String orientacion, ImageView barco) {
+		ArrayList<ArrayList<Integer>> coordenadas = new ArrayList<ArrayList<Integer>>();
+		
+		if (orientacion.contentEquals("Horizontal")) {
+			if (barco.equals(portaAviones)) {
+				
+				for(int i = 0; i<4;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					y=y+1;
+				}
+			}else if (barco.equals(destructor1) || barco.equals(destructro2) || 
+					barco.equals(desctructor3)) {
+				
+				for(int i = 0; i<3;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					y=y+1;
+				}
+			}else if (barco.equals(fragata1) || barco.equals(fragata2)) {
+				
+				for(int i = 0; i<1;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					y=y+1;
+				}
+			}else if (barco.equals(submarino1) || barco.equals(submarino2) || 
+					barco.equals(submarino3)) {
+				
+				for(int i = 0; i<3;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					y=y+1;
+				}
+			}
+		}else if (orientacion.contentEquals("Vertical")) {
+			if (barco.equals(portaAviones)) {
+				
+				for(int i = 0; i<4;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					x=x+1;
+				}
+			}else if (barco.equals(destructor1) || barco.equals(destructro2) || 
+					barco.equals(desctructor3)) {
+				
+				for(int i = 0; i<3;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					x=x+1;
+				}
+			}else if (barco.equals(fragata1) || barco.equals(fragata2)) {
+				
+				for(int i = 0; i<1;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					x=x+1;
+				}
+			}else if (barco.equals(submarino1) || barco.equals(submarino2) || 
+					barco.equals(submarino3)) {
+				
+				for(int i = 0; i<3;i=i+1) {
+					ArrayList<Integer> coordenada = new ArrayList<Integer>();
+					coordenada.add(x);
+					coordenada.add(y);
+					coordenadas.add(coordenada);
+					
+					x=x+1;
+				}
+			}
+		}
+		return coordenadas;
+	}
 	
 
 }

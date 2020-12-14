@@ -1,32 +1,47 @@
 package application;
+
+import java.util.ArrayList;
+
 public class Tablero {
 	
-	private Coordenada casillas[];
-	private Barco barcos[];
+	private ArrayList<Coordenada>casillas;
+	private ArrayList<Barco> barcos;
 	
 	
 	public Tablero() {
 		super();
-		this.casillas = new Coordenada[100];
-		this.barcos = new Barco[9];
+		this.casillas = new ArrayList<Coordenada>();
+		this.barcos = new ArrayList<Barco>();
 	}
 
+	public void setCoordenadas() {
+		for(int i = 0; i<10;i=i+1)
+			for(int j = 0; j<10;j=j+1) {
+				Coordenada coordenada = new Coordenada();
+				coordenada.setCoordenada(i, j);
+				this.casillas.add(coordenada);
+			}
+	}
 	
-	public Coordenada[] getCasillas() {
+	
+	
+	
+
+	public ArrayList<Coordenada> getCasillas() {
 		return casillas;
 	}
 
-	public void setCasillas(Coordenada[] casillas) {
-		this.casillas = casillas;
-	}
-
-	public Barco[] getBarcos() {
+	public ArrayList<Barco> getBarcos() {
 		return barcos;
 	}
 
-	public void setBarcos(Barco[] barcos) {
+	public void setBarcos(ArrayList<Barco> barcos) {
 		this.barcos = barcos;
 	}
+	
+	
+	
+	
 	
 	
 	

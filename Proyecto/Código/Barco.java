@@ -1,5 +1,7 @@
 package application;
 
+import java.util.ArrayList;
+
 public class Barco {
 	
 	//Atributos
@@ -7,7 +9,6 @@ public class Barco {
 	private int largo;
 	private int orientacion;
 	private int cantidadDeGolpes;
-	private Coordenada posicion[];
 	private boolean condicion;
 	
 	
@@ -18,7 +19,6 @@ public class Barco {
 		this.largo = largo;
 		this.orientacion = 0;
 		this.cantidadDeGolpes = 0;
-		this.posicion = new Coordenada[largo];
 		this.condicion = false;
 	}
 
@@ -71,15 +71,7 @@ public class Barco {
 	}
 
 
-	public Coordenada[] getPosicion() {
-		return posicion;
-	}
-
-
-	public void setPosicion(Coordenada[] posicion) {
-		this.posicion = posicion;
-	}
-
+	
 
 	public boolean isCondicion() {
 		return condicion;
@@ -89,7 +81,6 @@ public class Barco {
 	public void setCondicion(boolean condicion) {
 		this.condicion = condicion;
 	}
-	
 	
 	
 	
