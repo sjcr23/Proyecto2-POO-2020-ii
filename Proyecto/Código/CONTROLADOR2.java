@@ -70,8 +70,8 @@ public class CONTROLADOR2 implements Initializable {
 		barco.setRotate(barco.getRotate() + 90);
 		
 		if(barco.equals(portaAviones)) {
-			barco.setTranslateY(-15);
-			barco.setTranslateX(12);
+			barco.setTranslateY(-40);
+			barco.setTranslateX(45);
 			return barco;
 			
 		}
@@ -107,11 +107,25 @@ public class CONTROLADOR2 implements Initializable {
 		int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
 		String orientacion = posicion.getSelectionModel().getSelectedItem().toString();
 		
-		
+		ArrayList<ArrayList<Integer>> CoordenadasOcupadas = obtenerCoordenadas(ejey, ejex, orientacion, barcoSeleccionado);
 		if(orientacion.equals("Vertical")) {
 			
 			rotarFicha(barcoSeleccionado);
 	
+		}
+		for(int i=0; i<100; i=i+1) {
+			casilla = Casillas.get(i);
+			for(int k = 0; k< CoordenadasOcupadas.size();k=k+1) {
+				if(casilla.getCoordenadas().toString().equals(CoordenadasOcupadas.get(k).toString())) {
+					if(casilla.isEstado()) {
+						System.out.println("mamaste, perrito");
+						return;
+					}else {
+					casilla.setEstado();
+					System.out.println(casilla.toString());	
+					}
+				}	
+			}
 		}
 		
 		
@@ -122,21 +136,9 @@ public class CONTROLADOR2 implements Initializable {
 		if(botonBarco.getItems().isEmpty()) {
 			generarBarcos();
 		}
-		ArrayList<ArrayList<Integer>> CoordenadasOcupadas = obtenerCoordenadas(ejey, ejex, orientacion, barcoSeleccionado);
 		
-		for(int i=0; i<100; i=i+1) {
-			
-			casilla = Casillas.get(i);
-			for(int k = 0; k< CoordenadasOcupadas.size();k=k+1) {
-				System.out.println("casilla"+casilla.getCoordenadas().toString());
-				System.out.println("coordenadasOcupadas"+CoordenadasOcupadas.toString());
-				if(casilla.getCoordenadas().toString().equals(CoordenadasOcupadas.get(k).toString())) {
-					casilla.setEstado();
-					System.out.println(casilla.toString());	
-				}
-				
-			}
-		}
+		
+		
 		
 		
 	}

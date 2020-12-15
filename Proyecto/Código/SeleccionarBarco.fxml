@@ -245,7 +245,12 @@
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="162.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="14.0" layoutY="198.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/submarino.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="38.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
@@ -253,11 +258,6 @@
       <ImageView fitHeight="30.0" fitWidth="118.0" layoutX="89.0" layoutY="50.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/porta_aviones.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="38.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
-         <image>
-            <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
    </children>
