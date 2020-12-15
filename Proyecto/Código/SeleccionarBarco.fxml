@@ -161,7 +161,7 @@
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
       </Text>
-      <ImageView fx:id="submarino1" fitHeight="20.0" fitWidth="90.0" layoutX="38.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="submarino1" fitHeight="20.0" fitWidth="90.0" layoutX="59.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
@@ -171,7 +171,7 @@
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="submarino3" fitHeight="20.0" fitWidth="90.0" layoutX="112.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="submarino3" fitHeight="20.0" fitWidth="90.0" layoutX="59.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
@@ -215,7 +215,7 @@
       <ComboBox fx:id="EjeX" layoutX="67.0" layoutY="381.0" prefWidth="150.0" promptText="EJEX" />
       <ComboBox fx:id="EjeY" layoutX="67.0" layoutY="427.0" prefWidth="150.0" promptText="EJEY" />
       <ComboBox fx:id="posicion" layoutX="67.0" layoutY="475.0" prefWidth="150.0" promptText="ORIENTACION" />
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="112.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="162.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
@@ -245,12 +245,12 @@
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="14.0" layoutY="198.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="59.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="38.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="162.0" layoutY="187.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>

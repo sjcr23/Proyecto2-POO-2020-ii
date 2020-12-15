@@ -70,8 +70,9 @@ public class CONTROLADOR2 implements Initializable {
 		barco.setRotate(barco.getRotate() + 90);
 		
 		if(barco.equals(portaAviones)) {
-			barco.setTranslateY(-40);
-			barco.setTranslateX(45);
+			barco.setTranslateX(-45);
+			barco.setTranslateY(45);
+
 			return barco;
 			
 		}
@@ -102,7 +103,7 @@ public class CONTROLADOR2 implements Initializable {
 		ArrayList<Coordenada> Casillas = this.tablero1.getCasillas();
 		Coordenada casilla;
 		ImageView barcoSeleccionado = botonBarco.getSelectionModel().getSelectedItem();
-		botonBarco.getItems().remove(barcoSeleccionado);
+		
 		int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
 		int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
 		String orientacion = posicion.getSelectionModel().getSelectedItem().toString();
@@ -121,6 +122,7 @@ public class CONTROLADOR2 implements Initializable {
 						System.out.println("mamaste, perrito");
 						return;
 					}else {
+					botonBarco.getItems().remove(barcoSeleccionado);
 					casilla.setEstado();
 					System.out.println(casilla.toString());	
 					}
