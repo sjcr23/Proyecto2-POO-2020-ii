@@ -19,7 +19,7 @@
             <Image url="@../../resources/fondo.png" />
          </image>
       </ImageView>
-      <GridPane fx:id="tablero" focusTraversable="true" gridLinesVisible="true" layoutX="423.0" layoutY="198.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-color: white; -fx-background-color: white;">
+      <GridPane fx:id="tablero1" focusTraversable="true" gridLinesVisible="true" layoutX="423.0" layoutY="198.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-color: white; -fx-background-color: white;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -45,8 +45,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button layoutX="344.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-border-color: white;" text="Siguiente" textAlignment="CENTER" textFill="WHITE" />
-      <Button fx:id="guardarPosicion" layoutX="244.0" layoutY="390.0" mnemonicParsing="false" onAction="#ponerImagen" style="-fx-background-color: black; -fx-border-color: white;" text="Guardar Posicion" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="guardarPosicion" layoutX="244.0" layoutY="390.0" mnemonicParsing="false" onAction="#colocarBarcos" style="-fx-background-color: black; -fx-border-color: white;" text="Guardar Posicion" textAlignment="CENTER" textFill="WHITE" />
       <Text fill="WHITE" layoutX="433.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
@@ -162,7 +161,7 @@
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
       </Text>
-      <ImageView fx:id="submarino1" fitHeight="20.0" fitWidth="90.0" layoutX="38.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="submarino1" fitHeight="20.0" fitWidth="90.0" layoutX="54.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
@@ -172,12 +171,12 @@
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="submarino3" fitHeight="20.0" fitWidth="90.0" layoutX="112.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="submarino3" fitHeight="20.0" fitWidth="90.0" layoutX="162.0" layoutY="187.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="319.0" layoutY="33.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destructores" textAlignment="CENTER" wrappingWidth="241.7294921875">
+      <Text fill="WHITE" layoutX="312.0" layoutY="32.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destructores" textAlignment="CENTER" wrappingWidth="241.7294921875">
          <font>
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
@@ -216,7 +215,7 @@
       <ComboBox fx:id="EjeX" layoutX="67.0" layoutY="381.0" prefWidth="150.0" promptText="EJEX" />
       <ComboBox fx:id="EjeY" layoutX="67.0" layoutY="427.0" prefWidth="150.0" promptText="EJEY" />
       <ComboBox fx:id="posicion" layoutX="67.0" layoutY="475.0" prefWidth="150.0" promptText="ORIENTACION" />
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="112.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="162.0" layoutY="187.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
@@ -246,12 +245,12 @@
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="14.0" layoutY="198.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="54.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="38.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="54.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
@@ -261,12 +260,12 @@
             <Image url="@../../resources/porta_aviones.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fondo1" fitHeight="600.0" fitWidth="750.0" layoutX="750.0" pickOnBounds="true">
+      <ImageView fx:id="fondo1" fitHeight="600.0" fitWidth="750.0" layoutX="750.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/fondo.png" />
          </image>
       </ImageView>
-      <GridPane fx:id="tablero1" focusTraversable="true" gridLinesVisible="true" layoutX="1173.0" layoutY="198.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-color: white; -fx-background-color: white;">
+      <GridPane fx:id="tablero2" focusTraversable="true" gridLinesVisible="true" layoutX="787.0" layoutY="198.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-color: white; -fx-background-color: white;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -292,222 +291,227 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button layoutX="1094.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-border-color: white;" text="Siguiente" textAlignment="CENTER" textFill="WHITE" />
-      <Button fx:id="guardarPosicion1" layoutX="994.0" layoutY="390.0" mnemonicParsing="false" onAction="#ponerImagen" style="-fx-background-color: black; -fx-border-color: white;" text="Guardar Posicion" textAlignment="CENTER" textFill="WHITE" />
-      <Text fill="WHITE" layoutX="1183.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="795.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1210.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="822.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1229.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="26.7294921875">
+      <Text fill="WHITE" layoutX="841.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="26.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1269.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="881.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1299.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="911.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1330.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="942.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1358.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="970.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1388.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1000.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1418.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1030.0" layoutY="194.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1443.0" layoutY="193.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="30.0">
+      <Text fill="WHITE" layoutX="1055.0" layoutY="193.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="30.0">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="222.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="222.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="247.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="247.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="278.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="278.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="305.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="305.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="334.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="334.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="369.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="369.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="400.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="400.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="427.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="427.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1152.0" layoutY="455.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="14.7294921875">
+      <Text fill="WHITE" layoutX="1094.0" layoutY="455.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="14.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="1149.0" layoutY="484.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="20.7294921875">
+      <Text fill="WHITE" layoutX="1091.0" layoutY="484.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="20.7294921875">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="767.0" layoutY="33.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Porta Aviones" textAlignment="CENTER" wrappingWidth="241.7294921875">
+      <Text fill="WHITE" layoutX="1252.0" layoutY="38.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Porta Aviones" textAlignment="CENTER" wrappingWidth="241.7294921875">
          <font>
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
       </Text>
-      <ImageView fx:id="portaAviones1" fitHeight="30.0" fitWidth="118.0" layoutX="839.0" layoutY="50.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="portaAviones1" fitHeight="30.0" fitWidth="118.0" layoutX="1314.0" layoutY="50.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/porta_aviones.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="767.0" layoutY="131.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Submarinos" textAlignment="CENTER" wrappingWidth="241.7294921875">
+      <Text fill="WHITE" layoutX="1237.0" layoutY="138.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Submarinos" textAlignment="CENTER" wrappingWidth="241.7294921875">
          <font>
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
       </Text>
-      <ImageView fx:id="submarino11" fitHeight="20.0" fitWidth="90.0" layoutX="788.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="submarino11" fitHeight="20.0" fitWidth="90.0" layoutX="1254.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="submarino21" fitHeight="20.0" fitWidth="90.0" layoutX="912.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="submarino21" fitHeight="20.0" fitWidth="90.0" layoutX="1358.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="submarino31" fitHeight="20.0" fitWidth="90.0" layoutX="862.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="submarino31" fitHeight="20.0" fitWidth="90.0" layoutX="1358.0" layoutY="187.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="1069.0" layoutY="33.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destructores" textAlignment="CENTER" wrappingWidth="241.7294921875">
+      <Text fill="WHITE" layoutX="912.0" layoutY="32.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destructores" textAlignment="CENTER" wrappingWidth="241.7294921875">
          <font>
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
       </Text>
-      <ImageView fx:id="destructor11" fitHeight="20.0" fitWidth="60.0" layoutX="1105.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="destructor11" fitHeight="20.0" fitWidth="60.0" layoutX="972.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="destructro21" fitHeight="20.0" fitWidth="60.0" layoutX="1187.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="destructro21" fitHeight="20.0" fitWidth="60.0" layoutX="1056.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="desctructor31" fitHeight="20.0" fitWidth="60.0" layoutX="1145.0" layoutY="75.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="desctructor31" fitHeight="20.0" fitWidth="60.0" layoutX="1013.0" layoutY="75.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="771.0" layoutY="259.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fragatas" textAlignment="CENTER" wrappingWidth="241.7294921875">
+      <Text fill="WHITE" layoutX="1237.0" layoutY="258.0" smooth="false" strokeMiterLimit="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fragatas" textAlignment="CENTER" wrappingWidth="241.7294921875">
          <font>
             <Font name="DejaVu Sans Bold" size="26.0" />
          </font>
       </Text>
-      <ImageView fx:id="fragata11" fitHeight="20.0" fitWidth="25.0" layoutX="849.0" layoutY="268.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="fragata11" fitHeight="20.0" fitWidth="25.0" layoutX="1319.0" layoutY="272.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/fragata.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fragata21" fitHeight="20.0" fitWidth="25.0" layoutX="898.0" layoutY="268.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="fragata21" fitHeight="20.0" fitWidth="25.0" layoutX="1319.0" layoutY="272.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/fragata.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="botonBarco1" layoutX="817.0" layoutY="335.0" prefWidth="150.0" promptText="BARCO" />
-      <ComboBox fx:id="EjeX1" layoutX="817.0" layoutY="381.0" prefWidth="150.0" promptText="EJEX" />
-      <ComboBox fx:id="EjeY1" layoutX="817.0" layoutY="427.0" prefWidth="150.0" promptText="EJEY" />
-      <ComboBox fx:id="posicion1" layoutX="817.0" layoutY="475.0" prefWidth="150.0" promptText="ORIENTACION" />
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="862.0" layoutY="188.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="1358.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="849.0" layoutY="268.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="1360.0" layoutY="272.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/fragata.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="898.0" layoutY="268.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="1361.0" layoutY="272.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/fragata.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="1105.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="972.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="1187.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="1056.0" layoutY="45.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="1145.0" layoutY="75.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="60.0" layoutX="1013.0" layoutY="75.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/destructor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="764.0" layoutY="198.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="1254.0" layoutY="187.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="788.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="20.0" fitWidth="90.0" layoutX="1254.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/submarino.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="118.0" layoutX="839.0" layoutY="50.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fitHeight="30.0" fitWidth="118.0" layoutX="1314.0" layoutY="50.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@../../resources/porta_aviones.png" />
          </image>
       </ImageView>
-      <Separator layoutX="747.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="608.0" prefWidth="8.0" />
+      <Separator layoutX="747.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="0.0" />
+      <Button layoutX="706.0" layoutY="525.0" mnemonicParsing="false" style="-fx-background-color: black; -fx-border-color: white;" text="Siguiente" textAlignment="CENTER" textFill="WHITE" />
+      <ImageView fx:id="submarino22" fitHeight="20.0" fitWidth="90.0" layoutX="162.0" layoutY="154.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/submarino.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="guardarPosicion1" layoutX="1134.0" layoutY="393.0" mnemonicParsing="false" onAction="#colocarBarcos" style="-fx-background-color: black; -fx-border-color: white;" text="Guardar Posicion" textAlignment="CENTER" textFill="WHITE" />
+      <ComboBox fx:id="botonBarco2" layoutX="1283.0" layoutY="335.0" prefWidth="150.0" promptText="BARCO" />
+      <ComboBox fx:id="EjeX1" layoutX="1283.0" layoutY="380.0" prefWidth="150.0" promptText="EJEX" />
+      <ComboBox fx:id="EjeY1" layoutX="1283.0" layoutY="427.0" prefWidth="150.0" promptText="EJEY" />
+      <ComboBox fx:id="posicion1" layoutX="1286.0" layoutY="475.0" prefWidth="150.0" promptText="ORIENTACION" />
    </children>
 </Pane>

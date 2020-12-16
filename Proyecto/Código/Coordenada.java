@@ -4,13 +4,17 @@ import java.util.ArrayList;
 
 public class Coordenada {
 	
-	
+	private String tipo;
 	private ArrayList<Integer>  coordenadas;
 	private boolean Estado;
+	private boolean estadoGolpe;
 	
 	public Coordenada() {
+
+		this.tipo = "Agua";
 		this.coordenadas = new ArrayList<Integer>();
 		this.Estado = false;
+		this.estadoGolpe = false;
 	}
 	
 	
@@ -23,6 +27,9 @@ public class Coordenada {
 		this.Estado = true;
 	}
 
+	public void setTipo() {
+		this.tipo = "Barco";
+	}
 
 	public boolean isEstado() {
 		return Estado;
@@ -32,7 +39,14 @@ public class Coordenada {
 	public ArrayList<Integer> getCoordenadas() {
 		return coordenadas;
 	}
-
+	
+	public String getTipo() {
+		return tipo;
+	}
+	
+	public boolean getEstadoGolpe() {
+		return estadoGolpe;
+	}
 	
 	
 }

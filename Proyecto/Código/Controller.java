@@ -42,7 +42,7 @@ public class Controller implements Initializable {
 
 			Stage primaryStage = new Stage();
 			primaryStage.setTitle("Battleship");
-			primaryStage.setScene(new Scene(root, 750, 600));
+			primaryStage.setScene(new Scene(root, 1500, 600));
 			primaryStage.show();
 			
 

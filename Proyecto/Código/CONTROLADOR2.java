@@ -15,23 +15,40 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 public class CONTROLADOR2 implements Initializable {
-	private Tablero tablero1;
-	private Tablero tablero2;
+	int turno = 0;
+	
+	private Tablero matriz1;
+	private Tablero matriz2;
 
 	@FXML
 	private Button guardarPosicion;
 	
 	@FXML
+	private Button guardarPosicion1;
+	
+	@FXML
 	private ComboBox<ImageView> botonBarco;
+	
+	@FXML
+	private ComboBox<ImageView> botonBarco2;
 	
 	@FXML
 	private ComboBox<String> EjeX;
 	
 	@FXML
+	private ComboBox<String> EjeX1;
+	
+	@FXML
 	private ComboBox<String> EjeY;
 	
 	@FXML
+	private ComboBox<String> EjeY1;
+	
+	@FXML
 	private ComboBox<String> posicion;
+	
+	@FXML
+	private ComboBox<String> posicion1;
 	
 	@FXML
 	private ImageView fondo;
@@ -64,7 +81,10 @@ public class CONTROLADOR2 implements Initializable {
 	private ImageView fragata2;
 	
 	@FXML
-	private GridPane tablero;
+	private GridPane tablero1;
+	
+	@FXML
+	private GridPane tablero2;
 	
 	public ImageView rotarFicha(ImageView barco) {
 		barco.setRotate(barco.getRotate() + 90);
@@ -97,10 +117,22 @@ public class CONTROLADOR2 implements Initializable {
 		
 		return barco;
 	}
-
+	
 	@FXML
-	public void ponerImagen(ActionEvent eventoS) {
-		ArrayList<Coordenada> Casillas = this.tablero1.getCasillas();
+	public void colocarBarcos(ActionEvent eventos) {
+		if(turno == 0) {
+			ponerImagen(tablero1,botonBarco, EjeX, EjeY, posicion, matriz1);
+		}
+		
+		else {
+			ponerImagen(tablero2, botonBarco2, EjeX1, EjeY1, posicion1, matriz2);
+		}
+	}
+	
+	
+	public void ponerImagen(GridPane tablero, ComboBox<ImageView> botonBarco, ComboBox<String> EjeX,
+			ComboBox<String> EjeY, ComboBox<String> posicion, Tablero matriz) {
+		ArrayList<Coordenada> Casillas = matriz.getCasillas();
 		Coordenada casilla;
 		ImageView barcoSeleccionado = botonBarco.getSelectionModel().getSelectedItem();
 		
@@ -117,14 +149,25 @@ public class CONTROLADOR2 implements Initializable {
 		for(int i=0; i<100; i=i+1) {
 			casilla = Casillas.get(i);
 			for(int k = 0; k< CoordenadasOcupadas.size();k=k+1) {
+					
 				if(casilla.getCoordenadas().toString().equals(CoordenadasOcupadas.get(k).toString())) {
 					if(casilla.isEstado()) {
+						
+						if(barcoSeleccionado.getRotate() == 90) {
+							barcoSeleccionado.setRotate(barcoSeleccionado.getRotate() - 90);
+						}
+						
+						barcoSeleccionado.setTranslateX(0);
+						barcoSeleccionado.setTranslateY(0);
 						System.out.println("mamaste, perrito");
 						return;
 					}else {
+						System.out.println("=========================");
 					botonBarco.getItems().remove(barcoSeleccionado);
 					casilla.setEstado();
-					System.out.println(casilla.toString());	
+					casilla.setTipo();
+					
+					System.out.println(casilla.getCoordenadas().toString() + " " + casilla.getTipo());	
 					}
 				}	
 			}
@@ -135,13 +178,14 @@ public class CONTROLADOR2 implements Initializable {
 		barcoSeleccionado.toBack();
 		
 		
-		if(botonBarco.getItems().isEmpty()) {
-			generarBarcos();
+		if(botonBarco.getItems().isEmpty() && turno == 0) {
+			this.turno = 1;
+
 		}
 		
+	
 		
-		
-		
+	
 		
 	}
 	
@@ -180,7 +224,7 @@ public class CONTROLADOR2 implements Initializable {
 	}
 
 	public GridPane getTablero() {
-		return tablero;
+		return tablero1;
 	}
 	
 	
@@ -193,36 +237,39 @@ public class CONTROLADOR2 implements Initializable {
 	}
 	
 
-	public void generarBarcos(){
-		
-		ObservableList<ImageView> barcosJugador = FXCollections.observableArrayList(portaAviones,submarino1,submarino2,
-				submarino3,destructor1,destructro2,desctructor3,fragata1,fragata2);
-		botonBarco.setItems(barcosJugador);
+
 		
 
-	}
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
 		
-		generarBarcos();
+		ObservableList<ImageView> barcosJugador = FXCollections.observableArrayList(portaAviones
+				,submarino1,submarino2,
+				submarino3,destructor1,destructro2,desctructor3,fragata1,fragata2);
+		
+		botonBarco.setItems(barcosJugador);
 		
 		
 		ObservableList<String> ejes = FXCollections.observableArrayList("1", "2", "3","4", "5", "6", "7", "8", "9","10");
 		EjeX.setItems(ejes);
 		EjeY.setItems(ejes);
+		EjeX1.setItems(ejes);
+		EjeY1.setItems(ejes);
 		
 
 
 		ObservableList<String> orientacion = FXCollections.observableArrayList("Horizontal", "Vertical");
 		posicion.setItems(orientacion);
+		posicion1.setItems(orientacion);
 		
-		this.tablero1 = new Tablero();
-		tablero1.setCoordenadas();
+		this.matriz1 = new Tablero();
+		matriz1.setCoordenadas();
 		
-		this.tablero2 = new Tablero();
-		tablero2.setCoordenadas();
+		this.matriz2 = new Tablero();
+		matriz2.setCoordenadas();
 		
 	}
 	//Pone las casillas, que los barcos cubren 
@@ -243,7 +290,7 @@ public class CONTROLADOR2 implements Initializable {
 			}else if (barco.equals(destructor1) || barco.equals(destructro2) || 
 					barco.equals(desctructor3)) {
 				
-				for(int i = 0; i<3;i=i+1) {
+				for(int i = 0; i<2;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
 					coordenada.add(y);
@@ -287,7 +334,7 @@ public class CONTROLADOR2 implements Initializable {
 			}else if (barco.equals(destructor1) || barco.equals(destructro2) || 
 					barco.equals(desctructor3)) {
 				
-				for(int i = 0; i<3;i=i+1) {
+				for(int i = 0; i<2;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
 					coordenada.add(y);
