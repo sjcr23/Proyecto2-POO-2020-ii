@@ -47,6 +47,11 @@ public class Coordenada {
 	public boolean getEstadoGolpe() {
 		return estadoGolpe;
 	}
+
+
+	public void setEstadoGolpe() {
+		this.estadoGolpe = true;
+	}
 	
 	
 }
