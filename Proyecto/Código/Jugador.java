@@ -30,7 +30,7 @@ public class Jugador {
 	}
 	
 	
-	public void Atacar(int x, int y, Tablero matriz, GridPane tablero, int turno) {
+	public int Atacar(int x, int y, Tablero matriz, GridPane tablero, int turno) {
 		ArrayList<Integer> coordenada = new ArrayList<Integer>();
 		ArrayList<Casilla> Casillas = matriz.getCasillas();
 		
@@ -42,14 +42,9 @@ public class Jugador {
 			coordenadaActaul = Casillas.get(i);
 			if(coordenadaActaul.getCoordenadas().toString().equals(coordenada.toString())) {
 				
-				if(coordenadaActaul.getEstadoGolpe()== false) {
+				if(coordenadaActaul.getEstadoGolpe() == false) {
 					
-					if(turno == 1) {
-						turno = 0;
-					}
-					else {
-						turno = 1;
-					}
+
 					coordenadaActaul.setEstadoGolpe();
 					System.out.println("1");
 					
@@ -84,15 +79,24 @@ public class Jugador {
 						
 					}
 					
-					return;
-				}				
+					return turno;
+				}
+				
+				if(turno == 1) {
+					turno = 0;
+					return turno;
+				}
+				else {
+					turno = 1;
+					return turno;
+				}
 				
 
-				System.out.println("4");
-				return;
+
 			}
 
 		}
+		return turno;
 			
 	}
 	

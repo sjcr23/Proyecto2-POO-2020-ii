@@ -10,8 +10,10 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 
 public class Juego implements Initializable {
 
@@ -315,7 +317,7 @@ public class Juego implements Initializable {
 		viabilidad = posicionViable(ejey, ejex, orientacion, barcoSeleccionado);
 		
 		if (viabilidad == false) {
-			System.out.println("mamaste, perrito");
+			System.out.println("El barco no cabe en esa casilla");
 		}else {
 			if(orientacion.equals("Vertical")) {
 				
@@ -335,7 +337,7 @@ public class Juego implements Initializable {
 							
 							barcoSeleccionado.setTranslateX(0);
 							barcoSeleccionado.setTranslateY(0);
-							System.out.println("mamaste, perrito");
+							System.out.println("Ya hay un barco");
 							return;
 						}
 						else {
@@ -404,9 +406,9 @@ public class Juego implements Initializable {
 		if(turno == 0) {
 			int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
 			int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
-			jugador1.Atacar(ejex, ejey, matriz2, tablero2, turno);
+			turno = jugador1.Atacar(ejex, ejey, matriz2, tablero2, turno);
 			
-			if(turno == 0) {
+			if(turno == 1) {
 				return;
 			}
 			
@@ -425,9 +427,9 @@ public class Juego implements Initializable {
 		
 		int ejex = Integer.parseInt(EjeX1.getSelectionModel().getSelectedItem().toString())-1;
 		int ejey = Integer.parseInt(EjeY1.getSelectionModel().getSelectedItem().toString())-1;
-		jugador2.Atacar(ejex, ejey, matriz1, tablero1, turno);
+		turno = jugador2.Atacar(ejex, ejey, matriz1, tablero1, turno);
 		
-		if(turno == 1) {
+		if(turno == 0) {
 			return;
 		}
 		
