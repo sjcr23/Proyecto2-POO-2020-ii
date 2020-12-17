@@ -16,19 +16,9 @@ import javafx.stage.Stage;
 
 
 public class Controller implements Initializable {
+	
 	private Stage juego;
 	
-	
-	
-	public Stage getJuego() {
-		return juego;
-	}
-
-	public void setJuego(Stage juego) {
-		this.juego = juego;
-	}
-
-
 	Controller menu;
 	
 	@FXML
@@ -70,6 +60,11 @@ public class Controller implements Initializable {
 
 
     }
+	
+	
+	public Stage getJuego() {
+		return juego;
+	}
 
 
     @Override
@@ -78,5 +73,8 @@ public class Controller implements Initializable {
         menu = this;
 
     }
+    
+    
+    
 
 }

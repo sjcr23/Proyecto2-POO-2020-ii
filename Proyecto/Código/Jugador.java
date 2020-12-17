@@ -29,17 +29,13 @@ public class Jugador {
 	
 	public void Atacar(int x, int y, Tablero matriz, GridPane tablero ) {
 		ArrayList<Integer> coordenada = new ArrayList<Integer>();
-		
 		ArrayList<Coordenada> Casillas = matriz.getCasillas();
 		
-		
-		
-		coordenada.add(y);
-		coordenada.add(x);
-		
+		coordenada.add(y); coordenada.add(x);
 		Coordenada coordenadaActaul;
 		
 		for(int i=0; i<100; i=i+1) {
+			
 			coordenadaActaul = Casillas.get(i);
 			if(coordenadaActaul.getCoordenadas().toString().equals(coordenada.toString())) {
 				
@@ -48,6 +44,7 @@ public class Jugador {
 					System.out.println("1");
 					
 					if(coordenadaActaul.isEstado()) {
+						
 						System.out.println("2");
 						java.io.FileInputStream fis = null;
 						try {
@@ -57,14 +54,13 @@ public class Jugador {
 							e.printStackTrace();
 						}
 						ImageView iv = new ImageView(new Image(fis));
-						tablero.add(iv, x,y);
+						tablero.add(iv, x, y);
 						iv.toBack();
 						
-
-
 					}
-					
+		
 					else {
+						
 						System.out.println("3");
 						Text marca = new Text();
 						marca.setText("X");
@@ -74,15 +70,14 @@ public class Jugador {
 					}
 					
 					return;
-				}
+				}				
 				
 				System.out.println("4");
 				return;
 			}
-		
+
 		}
-		
-		
+			
 	}
 	
 	public int verificarPerdida() {
