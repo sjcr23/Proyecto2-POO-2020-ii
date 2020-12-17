@@ -24,7 +24,6 @@ public class Tablero {
 	
 	
 	
-
 	public ArrayList<Coordenada> getCasillas() {
 		return casillas;
 	}
@@ -38,16 +37,7 @@ public class Tablero {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	

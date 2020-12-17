@@ -13,9 +13,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-public class CONTROLADOR2 implements Initializable {
+public class Juego implements Initializable {
 	
-	Controller menu;
+	MenuInicio menu;
 	
 	private Jugador jugador1;
 	private Jugador jugador2;
@@ -397,7 +397,7 @@ public class CONTROLADOR2 implements Initializable {
 		
 	}
 	
-	public void setMenu(Controller menu) {
+	public void setMenu(MenuInicio menu) {
 		
 		this.menu = menu;
 		

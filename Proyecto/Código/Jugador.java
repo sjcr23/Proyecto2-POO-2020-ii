@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Text;
 
 public class Jugador {
 	
@@ -61,11 +60,15 @@ public class Jugador {
 		
 					else {
 						
-						System.out.println("3");
-						Text marca = new Text();
-						marca.setText("X");
-						marca.setOpacity(1);
-						tablero.add(marca, x,y);
+						java.io.FileInputStream fis = null;
+						try {
+							fis = new FileInputStream("resources/canva-photo-editor.png");
+						} catch (FileNotFoundException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						ImageView iv = new ImageView(new Image(fis));
+						tablero.add(iv, x, y);
 						
 					}
 					

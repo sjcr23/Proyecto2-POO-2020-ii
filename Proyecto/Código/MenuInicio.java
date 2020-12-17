@@ -15,11 +15,11 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 
-public class Controller implements Initializable {
+public class MenuInicio implements Initializable {
 	
 	private Stage juego;
 	
-	Controller menu;
+	MenuInicio menu;
 	
 	@FXML
 	private ImageView fondo;
@@ -39,10 +39,10 @@ public class Controller implements Initializable {
     void crearPartida(ActionEvent evento) {
 
         try {
-            FXMLLoader ventanaNuevaPartida = new FXMLLoader(getClass().getResource("SeleccionarBarco.fxml"));
+            FXMLLoader ventanaNuevaPartida = new FXMLLoader(getClass().getResource("Juego.fxml"));
             Parent root = (Parent) ventanaNuevaPartida.load();
-            CONTROLADOR2 submarino = (CONTROLADOR2) ventanaNuevaPartida.getController();
-            submarino.setMenu(menu);
+            Juego escenaJuego = (Juego) ventanaNuevaPartida.getController();
+            escenaJuego.setMenu(menu);
             Stage primaryStage = new Stage();
             primaryStage.setTitle("Battleship");
             primaryStage.setScene(new Scene(root));
