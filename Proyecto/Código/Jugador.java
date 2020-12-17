@@ -32,6 +32,8 @@ public class Jugador {
 		
 		ArrayList<Coordenada> Casillas = matriz.getCasillas();
 		
+		
+		
 		coordenada.add(y);
 		coordenada.add(x);
 		
@@ -41,7 +43,7 @@ public class Jugador {
 			coordenadaActaul = Casillas.get(i);
 			if(coordenadaActaul.getCoordenadas().toString().equals(coordenada.toString())) {
 				
-				if(!coordenadaActaul.getEstadoGolpe()) {
+				if(coordenadaActaul.getEstadoGolpe()== false) {
 					coordenadaActaul.setEstadoGolpe();
 					System.out.println("1");
 					
@@ -49,8 +51,7 @@ public class Jugador {
 						System.out.println("2");
 						java.io.FileInputStream fis = null;
 						try {
-							fis = new FileInputStream("/home/betozumbado/Desktop/Proyects/IC-2101-POO-2020-ii-/Lab-06/"
-									+ "Dardos/resources/fueguito.png");
+							fis = new FileInputStream("resources/fueguito.png");
 						} catch (FileNotFoundException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -71,20 +72,12 @@ public class Jugador {
 						tablero.add(marca, x,y);
 						
 					}
-
-					
-					
-					
-
 					
 					return;
-					
-					
 				}
 				
 				System.out.println("4");
 				return;
-				
 			}
 		
 		}
@@ -96,8 +89,8 @@ public class Jugador {
 		int contador = 0;
 		for(int i = 0; i<barcos.size();i++) {
 			
-			if(barcos.get(i).getEstadoGolpe() && barcos.get(i).getTipo().equals("Barco")) {
-				i++;
+			if(barcos.get(i).isEstado() && barcos.get(i).getEstadoGolpe()) {
+				contador++;
 			}
 		}
 		

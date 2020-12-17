@@ -16,7 +16,19 @@ import javafx.stage.Stage;
 
 
 public class Controller implements Initializable {
+	private Stage juego;
 	
+	
+	
+	public Stage getJuego() {
+		return juego;
+	}
+
+	public void setJuego(Stage juego) {
+		this.juego = juego;
+	}
+
+
 	Controller menu;
 	
 	@FXML
@@ -34,33 +46,37 @@ public class Controller implements Initializable {
 	}
 	
 	@FXML
-	void crearPartida(ActionEvent evento) {
+    void crearPartida(ActionEvent evento) {
 
-		try {
+        try {
+            FXMLLoader ventanaNuevaPartida = new FXMLLoader(getClass().getResource("SeleccionarBarco.fxml"));
+            Parent root = (Parent) ventanaNuevaPartida.load();
+            CONTROLADOR2 submarino = (CONTROLADOR2) ventanaNuevaPartida.getController();
+            submarino.setMenu(menu);
+            Stage primaryStage = new Stage();
+            primaryStage.setTitle("Battleship");
+            primaryStage.setScene(new Scene(root));
+            primaryStage.show();
+            
+            this.juego = primaryStage;
+            
+            
+            
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            System.out.println("1");
+        }
 
-			Parent root = FXMLLoader.load(getClass().getResource("SeleccionarBarco.fxml"));
 
-			Stage primaryStage = new Stage();
-			primaryStage.setTitle("Battleship");
-			primaryStage.setScene(new Scene(root, 1500, 600));
-			primaryStage.show();
-			
 
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-		}
-		
-		
-		
-	}
-	
+    }
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		menu = this;
-		
-	}
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        // TODO Auto-generated method stub
+        menu = this;
+
+    }
 
 }

@@ -26,6 +26,8 @@ public class CONTROLADOR2 implements Initializable {
 	
 	private Tablero matriz1;
 	private Tablero matriz2;
+	
+	
 
 	
 	
@@ -326,6 +328,11 @@ public class CONTROLADOR2 implements Initializable {
 		
 	}
 	
+	public void cerrarJuego() {
+		menu.getJuego().close();
+		
+		}
+
 
 	@FXML
 	public void Atacar() {
@@ -338,8 +345,9 @@ public class CONTROLADOR2 implements Initializable {
 			turno = 1;
 			
 			
-			if(jugador2.verificarPerdida() == 9) {
+			if(jugador2.verificarPerdida() == 21) {
 				System.out.println("gano1");
+				cerrarJuego();
 				
 			}
 			
@@ -353,8 +361,9 @@ public class CONTROLADOR2 implements Initializable {
 		atacar1.setOpacity(1);
 		turno = 0;
 		
-			if(jugador1.verificarPerdida() == 9) {
+			if(jugador1.verificarPerdida() == 21) {
 			System.out.println("gano2");
+			cerrarJuego();
 			
 			}
 		

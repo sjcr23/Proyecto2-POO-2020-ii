@@ -5,13 +5,11 @@ import java.util.ArrayList;
 public class Tablero {
 	
 	private ArrayList<Coordenada>casillas;
-	private ArrayList<Barco> barcos;
 	
 	
 	public Tablero() {
 		super();
 		this.casillas = new ArrayList<Coordenada>();
-		this.barcos = new ArrayList<Barco>();
 	}
 
 	public void setCoordenadas() {
@@ -31,13 +29,7 @@ public class Tablero {
 		return casillas;
 	}
 
-	public ArrayList<Barco> getBarcos() {
-		return barcos;
-	}
-
-	public void setBarcos(ArrayList<Barco> barcos) {
-		this.barcos = barcos;
-	}
+	
 	
 	
 	
