@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 public class Tablero {
 	
-	private ArrayList<Coordenada>casillas;
+	private ArrayList<Casilla> casillas;
 	
 	
 	public Tablero() {
 		super();
-		this.casillas = new ArrayList<Coordenada>();
+		this.casillas = new ArrayList<Casilla>();
 	}
 
 	public void setCoordenadas() {
 		for(int i = 0; i<10;i=i+1)
 			for(int j = 0; j<10;j=j+1) {
-				Coordenada coordenada = new Coordenada();
+				Casilla coordenada = new Casilla();
 				coordenada.setCoordenada(i, j);
 				this.casillas.add(coordenada);
 			}
@@ -24,7 +24,7 @@ public class Tablero {
 	
 	
 	
-	public ArrayList<Coordenada> getCasillas() {
+	public ArrayList<Casilla> getCasillas() {
 		return casillas;
 	}
 

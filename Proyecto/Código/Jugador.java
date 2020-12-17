@@ -13,25 +13,29 @@ public class Jugador {
 	
 	//Atributos
 
-	private ArrayList<Coordenada> barcos;
+	private ArrayList<Casilla> barcos;
+	private Tablero matriz;
+
 	
 	//Constructor
-	public Jugador() {
+	public Jugador(Tablero matriz ) {
 		super();
-		this.barcos = new ArrayList<Coordenada>();
+		this.barcos = new ArrayList<Casilla>();
+		this.matriz = matriz;
+
 	}
 	
-	public void setBarcos(Coordenada e) {
+	public void setBarcos(Casilla e) {
 		this.barcos.add(e);
 	}
 	
 	
-	public void Atacar(int x, int y, Tablero matriz, GridPane tablero ) {
+	public void Atacar(int x, int y, Tablero matriz, GridPane tablero, int turno) {
 		ArrayList<Integer> coordenada = new ArrayList<Integer>();
-		ArrayList<Coordenada> Casillas = matriz.getCasillas();
+		ArrayList<Casilla> Casillas = matriz.getCasillas();
 		
 		coordenada.add(y); coordenada.add(x);
-		Coordenada coordenadaActaul;
+		Casilla coordenadaActaul;
 		
 		for(int i=0; i<100; i=i+1) {
 			
@@ -39,10 +43,18 @@ public class Jugador {
 			if(coordenadaActaul.getCoordenadas().toString().equals(coordenada.toString())) {
 				
 				if(coordenadaActaul.getEstadoGolpe()== false) {
+					
+					if(turno == 1) {
+						turno = 0;
+					}
+					else {
+						turno = 1;
+					}
 					coordenadaActaul.setEstadoGolpe();
 					System.out.println("1");
 					
 					if(coordenadaActaul.isEstado()) {
+	
 						
 						System.out.println("2");
 						java.io.FileInputStream fis = null;
@@ -75,6 +87,7 @@ public class Jugador {
 					return;
 				}				
 				
+
 				System.out.println("4");
 				return;
 			}
@@ -94,4 +107,20 @@ public class Jugador {
 		
 		return contador;
 	}
+
+	public Tablero getMatriz() {
+		return matriz;
+	}
+
+	public void setMatriz(Tablero matriz) {
+		this.matriz = matriz;
+	}
+
+
+	
+	
+	
+	
+	
+	
 }

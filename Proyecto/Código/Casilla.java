@@ -2,14 +2,14 @@ package application;
 
 import java.util.ArrayList;
 
-public class Coordenada {
+public class Casilla {
 	
 	private String tipo;
-	private ArrayList<Integer>  coordenadas;
+	private ArrayList<Integer> coordenadas;
 	private boolean Estado;
 	private boolean estadoGolpe;
 	
-	public Coordenada() {
+	public Casilla() {
 
 		this.tipo = "Agua";
 		this.coordenadas = new ArrayList<Integer>();

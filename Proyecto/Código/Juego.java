@@ -14,18 +14,23 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
 public class Juego implements Initializable {
-	
+
 	MenuInicio menu;
 	
 	private Jugador jugador1;
+	
 	private Jugador jugador2;
+	
 	private Tablero matriz1;
+	
 	private Tablero matriz2;
 	
-	int turno = 0;
+	int turno;
 	
 	int bandera;
 	
+	@FXML
+	private Button guardarPartida;
 	
 	@FXML
 	private Button guardarPosicion;
@@ -190,32 +195,40 @@ public class Juego implements Initializable {
 					
 					y=y+1;
 				}
-			}else if (barco.equals(destructor1) || barco.equals(destructro2) || 
+			}
+		
+			
+			else if (barco.equals(destructor1) || barco.equals(destructro2) || 
 					barco.equals(desctructor3) || barco.equals(destructor1_2) || barco.equals(destructro2_2) || 
 					barco.equals(desctructor3_2)) {
 				
-				for(int i = 0; i<2;i=i+1) {
-					ArrayList<Integer> coordenada = new ArrayList<Integer>();
-					coordenada.add(x);
-					coordenada.add(y);
-					coordenadas.add(coordenada);
+					for(int i = 0; i<2;i=i+1) {
+						ArrayList<Integer> coordenada = new ArrayList<Integer>();
+						coordenada.add(x);
+						coordenada.add(y);
+						coordenadas.add(coordenada);
 					
-					y=y+1;
-				}
-			}else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
-					|| barco.equals(fragata2_2)) {
+						y=y+1;
+					}
+			}
+		
+			else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
+						|| barco.equals(fragata2_2)) {
 				
 				for(int i = 0; i<1;i=i+1) {
+					
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
 					coordenada.add(y);
 					coordenadas.add(coordenada);
-					
 					y=y+1;
+				
 				}
-			}else if (barco.equals(submarino1) || barco.equals(submarino2) || 
-					barco.equals(submarino3) || barco.equals(submarino1_2) || barco.equals(submarino2_2) || 
-					barco.equals(submarino3_2)) {
+			}
+			
+			else if (barco.equals(submarino1) || barco.equals(submarino2) || 
+				barco.equals(submarino3) || barco.equals(submarino1_2) || barco.equals(submarino2_2) || 
+				barco.equals(submarino3_2)) {
 				
 				for(int i = 0; i<3;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
@@ -226,9 +239,12 @@ public class Juego implements Initializable {
 					y=y+1;
 				}
 			}
-		}else if (orientacion.contentEquals("Vertical")) {
+			
+		}
+		
+		
+		else if (orientacion.contentEquals("Vertical")) {
 			if (barco.equals(portaAviones) || barco.equals(portaAviones_2)) {
-				
 				for(int i = 0; i<4;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
@@ -237,7 +253,8 @@ public class Juego implements Initializable {
 					
 					x=x+1;
 				}
-			}else if (barco.equals(destructor1) || barco.equals(destructro2) || 
+			}
+			else if (barco.equals(destructor1) || barco.equals(destructro2) || 
 					barco.equals(desctructor3) || barco.equals(destructor1_2) || barco.equals(destructro2_2) || 
 					barco.equals(desctructor3_2)) {
 				
@@ -249,7 +266,8 @@ public class Juego implements Initializable {
 					
 					x=x+1;
 				}
-			}else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
+			}
+			else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
 					|| barco.equals(fragata2_2)) {
 				
 				for(int i = 0; i<1;i=i+1) {
@@ -260,7 +278,8 @@ public class Juego implements Initializable {
 					
 					x=x+1;
 				}
-			}else if (barco.equals(submarino1) || barco.equals(submarino2) || 
+			}
+			else if (barco.equals(submarino1) || barco.equals(submarino2) || 
 					barco.equals(submarino3) || barco.equals(submarino1_2) || barco.equals(submarino2_2) || 
 					barco.equals(submarino3_2)) {
 				
@@ -273,16 +292,17 @@ public class Juego implements Initializable {
 					x=x+1;
 				}
 			}
+			
 		}
+		
 		return coordenadas;
 	}
 	
 	public void ponerImagen(GridPane tablero, ComboBox<ImageView> botonBarco, ComboBox<String> EjeX,
 		ComboBox<String> EjeY, ComboBox<String> posicion, Tablero matriz, Jugador jugador) {
 		
-		
-		ArrayList<Coordenada> Casillas = matriz.getCasillas();
-		Coordenada casilla;
+		ArrayList<Casilla> Casillas = matriz.getCasillas();
+		Casilla casilla;
 		ImageView barcoSeleccionado = botonBarco.getSelectionModel().getSelectedItem();
 		
 		int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
@@ -310,13 +330,13 @@ public class Juego implements Initializable {
 						barcoSeleccionado.setTranslateY(0);
 						System.out.println("mamaste, perrito");
 						return;
-					}else {
-					System.out.println("=========================");
-					botonBarco.getItems().remove(barcoSeleccionado);
-					casilla.setEstado();
-					casilla.setTipo();
-					jugador.setBarcos(casilla);
-					System.out.println(casilla.getCoordenadas().toString() + " " + casilla.getTipo());	
+					}
+					else {
+						System.out.println("=========================");
+						botonBarco.getItems().remove(barcoSeleccionado);
+						casilla.setEstado(); casilla.setTipo();
+						jugador.setBarcos(casilla);
+						System.out.println(casilla.getCoordenadas().toString() + " " + casilla.getTipo());	
 					}
 				}	
 			}
@@ -331,24 +351,38 @@ public class Juego implements Initializable {
 		if(bandera == 9 && turno == 0) {
 
 			botonBarco2.setDisable(false); botonBarco2.setOpacity(1);
+			
 			botonBarco.setDisable(true); botonBarco.setOpacity(0);
+			
 			portaAviones.setOpacity(0);
 			submarino1.setOpacity(0); submarino2.setOpacity(0); submarino3.setOpacity(0);
 			fragata1.setOpacity(0); fragata2.setOpacity(0);
 			destructor1.setOpacity(0); destructro2.setOpacity(0); desctructor3.setOpacity(0);
 			guardarPosicion.setDisable(true); guardarPosicion.setOpacity(0);
+			
+			posicion.setDisable(true); posicion.setOpacity(0);
+			
 			this.turno = 1;
+			
 			return;
 		}
 		
 		if(bandera == 18) {
+			
 			atacar1.setOpacity(1); botonBarco.setDisable(true); botonBarco.setOpacity(0);
+			
 			guardarPosicion1.setDisable(true); guardarPosicion1.setOpacity(0);
 			portaAviones_2.setOpacity(0);
 			submarino1_2.setOpacity(0); submarino2_2.setOpacity(0); submarino3_2.setOpacity(0);
 			fragata1_2.setOpacity(0); fragata2_2.setOpacity(0);
 			destructor1_2.setOpacity(0); destructro2_2.setOpacity(0); desctructor3_2.setOpacity(0);
+			
+			this.guardarPosicion1.setDisable(true); this.guardarPosicion1.setOpacity(0);
+			
+			posicion.setDisable(true); posicion.setOpacity(0);
+			
 			this.turno = 0;
+			
 			return;
 
 
@@ -362,10 +396,14 @@ public class Juego implements Initializable {
 		if(turno == 0) {
 			int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
 			int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
-			jugador1.Atacar(ejex, ejey, matriz2, tablero2);
+			jugador1.Atacar(ejex, ejey, matriz2, tablero2, turno);
+			
+			if(turno == 0) {
+				return;
+			}
+			
 			atacar1.setOpacity(0);
 			atacar2.setOpacity(1);
-			turno = 1;
 			
 			
 			if(jugador2.verificarPerdida() == 21) {
@@ -379,17 +417,22 @@ public class Juego implements Initializable {
 		
 		int ejex = Integer.parseInt(EjeX1.getSelectionModel().getSelectedItem().toString())-1;
 		int ejey = Integer.parseInt(EjeY1.getSelectionModel().getSelectedItem().toString())-1;
-		jugador2.Atacar(ejex, ejey, matriz1, tablero1);
+		jugador2.Atacar(ejex, ejey, matriz1, tablero1, turno);
+		
+		if(turno == 1) {
+			return;
+		}
+		
 		atacar2.setOpacity(0);
 		atacar1.setOpacity(1);
-		turno = 0;
+
 		
 			if(jugador1.verificarPerdida() == 21) {
 			System.out.println("gano2");
 			cerrarJuego();
 			
 			}
-		
+		return;
 	}
 		
 	public void cerrarJuego() {
@@ -403,11 +446,18 @@ public class Juego implements Initializable {
 		
 	}
 	
+
+	
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		jugador1 = new Jugador();
-		jugador2 = new Jugador();
+		
+		
+		turno = 0;
+		 
+		jugador1 = new Jugador(matriz1);
+		jugador2 = new Jugador(matriz2);
 		
 		
 		ObservableList<ImageView> barcosJugador = FXCollections.observableArrayList(portaAviones
