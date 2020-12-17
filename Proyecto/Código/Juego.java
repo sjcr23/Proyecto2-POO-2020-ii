@@ -25,6 +25,8 @@ public class Juego implements Initializable {
 	
 	private Tablero matriz2;
 	
+	private boolean viabilidad;
+	
 	int turno;
 	
 	int bandera;
@@ -310,82 +312,88 @@ public class Juego implements Initializable {
 		String orientacion = posicion.getSelectionModel().getSelectedItem().toString();
 		
 		ArrayList<ArrayList<Integer>> CoordenadasOcupadas = obtenerCoordenadas(ejey, ejex, orientacion, barcoSeleccionado);
-		if(orientacion.equals("Vertical")) {
-			
-			rotarFicha(barcoSeleccionado);
-	
-		}
-		for(int i=0; i<100; i=i+1) {
-			casilla = Casillas.get(i);
-			for(int k = 0; k< CoordenadasOcupadas.size();k=k+1) {
-					
-				if(casilla.getCoordenadas().toString().equals(CoordenadasOcupadas.get(k).toString())) {
-					if(casilla.isEstado()) {
-						
-						if(barcoSeleccionado.getRotate() == 90) {
-							barcoSeleccionado.setRotate(barcoSeleccionado.getRotate() - 90);
-						}
-						
-						barcoSeleccionado.setTranslateX(0);
-						barcoSeleccionado.setTranslateY(0);
-						System.out.println("mamaste, perrito");
-						return;
-					}
-					else {
-						System.out.println("=========================");
-						botonBarco.getItems().remove(barcoSeleccionado);
-						casilla.setEstado(); casilla.setTipo();
-						jugador.setBarcos(casilla);
-						System.out.println(casilla.getCoordenadas().toString() + " " + casilla.getTipo());	
-					}
-				}	
+		viabilidad = posicionViable(ejey, ejex, orientacion, barcoSeleccionado);
+		
+		if (viabilidad == false) {
+			System.out.println("mamaste, perrito");
+		}else {
+			if(orientacion.equals("Vertical")) {
+				
+				rotarFicha(barcoSeleccionado);
+		
 			}
-		}
-		
-		bandera++;
-		
-		tablero.add(barcoSeleccionado, ejex, ejey);
-		barcoSeleccionado.toBack();
-		
-		
-		if(bandera == 9 && turno == 0) {
-
-			botonBarco2.setDisable(false); botonBarco2.setOpacity(1);
+			for(int i=0; i<100; i=i+1) {
+				casilla = Casillas.get(i);
+				for(int k = 0; k< CoordenadasOcupadas.size();k=k+1) {
+						
+					if(casilla.getCoordenadas().toString().equals(CoordenadasOcupadas.get(k).toString())) {
+						if(casilla.isEstado()) {
+							
+							if(barcoSeleccionado.getRotate() == 90) {
+								barcoSeleccionado.setRotate(barcoSeleccionado.getRotate() - 90);
+							}
+							
+							barcoSeleccionado.setTranslateX(0);
+							barcoSeleccionado.setTranslateY(0);
+							System.out.println("mamaste, perrito");
+							return;
+						}
+						else {
+							System.out.println("=========================");
+							botonBarco.getItems().remove(barcoSeleccionado);
+							casilla.setEstado(); casilla.setTipo();
+							jugador.setBarcos(casilla);
+							System.out.println(casilla.getCoordenadas().toString() + " " + casilla.getTipo());	
+						}
+					}	
+				}
+			}
 			
-			botonBarco.setDisable(true); botonBarco.setOpacity(0);
+			bandera++;
 			
-			portaAviones.setOpacity(0);
-			submarino1.setOpacity(0); submarino2.setOpacity(0); submarino3.setOpacity(0);
-			fragata1.setOpacity(0); fragata2.setOpacity(0);
-			destructor1.setOpacity(0); destructro2.setOpacity(0); desctructor3.setOpacity(0);
-			guardarPosicion.setDisable(true); guardarPosicion.setOpacity(0);
+			tablero.add(barcoSeleccionado, ejex, ejey);
+			barcoSeleccionado.toBack();
 			
-			posicion.setDisable(true); posicion.setOpacity(0);
 			
-			this.turno = 1;
+			if(bandera == 9 && turno == 0) {
+	
+				botonBarco2.setDisable(false); botonBarco2.setOpacity(1);
+				
+				botonBarco.setDisable(true); botonBarco.setOpacity(0);
+				
+				portaAviones.setOpacity(0);
+				submarino1.setOpacity(0); submarino2.setOpacity(0); submarino3.setOpacity(0);
+				fragata1.setOpacity(0); fragata2.setOpacity(0);
+				destructor1.setOpacity(0); destructro2.setOpacity(0); desctructor3.setOpacity(0);
+				guardarPosicion.setDisable(true); guardarPosicion.setOpacity(0);
+				
+				posicion.setDisable(true); posicion.setOpacity(0);
+				
+				this.turno = 1;
+				
+				return;
+			}
 			
-			return;
-		}
-		
-		if(bandera == 18) {
-			
-			atacar1.setOpacity(1); botonBarco.setDisable(true); botonBarco.setOpacity(0);
-			
-			guardarPosicion1.setDisable(true); guardarPosicion1.setOpacity(0);
-			portaAviones_2.setOpacity(0);
-			submarino1_2.setOpacity(0); submarino2_2.setOpacity(0); submarino3_2.setOpacity(0);
-			fragata1_2.setOpacity(0); fragata2_2.setOpacity(0);
-			destructor1_2.setOpacity(0); destructro2_2.setOpacity(0); desctructor3_2.setOpacity(0);
-			
-			this.guardarPosicion1.setDisable(true); this.guardarPosicion1.setOpacity(0);
-			
-			posicion.setDisable(true); posicion.setOpacity(0);
-			
-			this.turno = 0;
-			
-			return;
-
-
+			if(bandera == 18) {
+				
+				atacar1.setOpacity(1); botonBarco.setDisable(true); botonBarco.setOpacity(0);
+				
+				guardarPosicion1.setDisable(true); guardarPosicion1.setOpacity(0);
+				portaAviones_2.setOpacity(0);
+				submarino1_2.setOpacity(0); submarino2_2.setOpacity(0); submarino3_2.setOpacity(0);
+				fragata1_2.setOpacity(0); fragata2_2.setOpacity(0);
+				destructor1_2.setOpacity(0); destructro2_2.setOpacity(0); desctructor3_2.setOpacity(0);
+				
+				this.guardarPosicion1.setDisable(true); this.guardarPosicion1.setOpacity(0);
+				
+				posicion.setDisable(true); posicion.setOpacity(0);
+				
+				this.turno = 0;
+				
+				return;
+	
+	
+			}
 		}
 		
 	}
@@ -494,6 +502,60 @@ public class Juego implements Initializable {
 		
 	}
 
-	
+	public boolean posicionViable(int x, int y, String orientacion, ImageView barco) {
+		if (orientacion.contentEquals("Horizontal")) {
+			if ((barco.equals(portaAviones) || barco.equals(portaAviones_2)) && y >=7) {
+				return false;
+		
+			
+			}else if ((barco.equals(destructor1) || barco.equals(destructro2) || 
+					barco.equals(desctructor3) || barco.equals(destructor1_2) || barco.equals(destructro2_2) || 
+					barco.equals(desctructor3_2)) && y >= 9) {
+					return false;
+			}
+		
+			else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
+						|| barco.equals(fragata2_2)) {
+				
+				return true;
+			}
+			
+			else if ((barco.equals(submarino1) || barco.equals(submarino2) || 
+				barco.equals(submarino3) || barco.equals(submarino1_2) || barco.equals(submarino2_2) || 
+				barco.equals(submarino3_2)) && y >= 8) {
+				
+				return false;
+			}
+			
+		}
+		
+		
+		else if (orientacion.contentEquals("Vertical")) {
+			if ((barco.equals(portaAviones) || barco.equals(portaAviones_2)) && x >= 7) {
+				return false;
+			}
+			else if ((barco.equals(destructor1) || barco.equals(destructro2) || 
+					barco.equals(desctructor3) || barco.equals(destructor1_2) || barco.equals(destructro2_2) || 
+					barco.equals(desctructor3_2)) && x >= 9) {
+				
+				return false;
+			}
+			else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
+					|| barco.equals(fragata2_2)) {
+				
+				return true;
+			}
+			else if ((barco.equals(submarino1) || barco.equals(submarino2) || 
+					barco.equals(submarino3) || barco.equals(submarino1_2) || barco.equals(submarino2_2) || 
+					barco.equals(submarino3_2)) && x >= 8) {
+				
+				return false;
+			}
 
-}
+			
+		}
+		return true;
+	}
+}	
+
+
