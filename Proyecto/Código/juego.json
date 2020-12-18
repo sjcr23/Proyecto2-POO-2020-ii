@@ -1,0 +1,1223 @@
+{
+	"juego":
+		[
+			{
+				"contador":0
+				,"jugadores":
+					[
+						{
+							"nombre":""
+							,"casillas":
+								[
+									{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								]
+						}
+					   ,{
+							"nombre":""
+							,"casillas":
+								[
+									{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								   ,{
+										"coordenada":[]
+									   ,"estado":false
+									   ,"estadoGolpeado":false
+											
+									}
+								]
+					    }
+					]
+			}
+		]
+}
