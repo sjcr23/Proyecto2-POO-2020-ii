@@ -8,10 +8,11 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
-    	
+    	//carga la intefaz de inicio
         Parent root = FXMLLoader.load(getClass().getResource("MenuInicio.fxml"));
+        //establece el nombre del encabezado
         primaryStage.setTitle("Battleship");
-        
+        // establece el tamaño
         Scene scene = new Scene(root, 750, 600);
         
         primaryStage.setScene(scene);

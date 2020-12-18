@@ -1,5 +1,5 @@
 package application;
-
+//bibliotecas a utilizar
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import java.net.URL;
@@ -16,9 +16,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
 public class Juego implements Initializable {
-
-	MenuInicio menu;
 	
+	MenuInicio menu;
+	//Atributos
 	private Jugador jugador1;
 	
 	private Jugador jugador2;
@@ -33,6 +33,7 @@ public class Juego implements Initializable {
 	
 	int bandera;
 	
+	//Elementos de la interfaz
 	@FXML
 	private Button guardarPartida;
 	
@@ -139,18 +140,21 @@ public class Juego implements Initializable {
 	
 	@FXML
 	public void colocarBarcos(ActionEvent eventos) {
+		//turno para el primer jugador 
 		if(turno == 0) {
 			ponerImagen(tablero1,botonBarco, EjeX, EjeY, posicion, matriz1, jugador1);
 		}
-		
+		//Turno para el segundo jugador 
 		else {
 			ponerImagen(tablero2, botonBarco2, EjeX1, EjeY1, posicion1, matriz2, jugador2);
 		}
 	}
 	
+	//Función encargada de rotar la imagenes en el caso de que sea necesario cmdiar su orientacion original
 	public ImageView rotarFicha(ImageView barco) {
+		//Gira 90 grados la imagen 
 		barco.setRotate(barco.getRotate() + 90);
-		
+		//Se ubica según e ltipo de barco en la sasilla 
 		if(barco.equals(portaAviones) || barco.equals(portaAviones_2)) {
 			barco.setTranslateX(-45);
 			barco.setTranslateY(45);
@@ -184,13 +188,15 @@ public class Juego implements Initializable {
 	
 
 	
-	//Pone las casillas, que los barcos cubren 
+	/*Retorna una lista con listas que contienen las coordenadas que ocuparia 
+	  el barco que se esta colocando*/
 	public ArrayList<ArrayList<Integer>> obtenerCoordenadas(int x, int y, String orientacion, ImageView barco) {
 		ArrayList<ArrayList<Integer>> coordenadas = new ArrayList<ArrayList<Integer>>();
-		
+		//Caso de imagenes en posición horizontal 
 		if (orientacion.contentEquals("Horizontal")) {
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			if (barco.equals(portaAviones) || barco.equals(portaAviones_2)) {
-				
+				//Calcula las coordenadas de las casillas que va a ocupar el barco 
 				for(int i = 0; i<4;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
@@ -201,11 +207,11 @@ public class Juego implements Initializable {
 				}
 			}
 		
-			
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			else if (barco.equals(destructor1) || barco.equals(destructro2) || 
 					barco.equals(desctructor3) || barco.equals(destructor1_2) || barco.equals(destructro2_2) || 
 					barco.equals(desctructor3_2)) {
-				
+				//Calcula las coordenadas de las casillas que va a ocupar el barco
 					for(int i = 0; i<2;i=i+1) {
 						ArrayList<Integer> coordenada = new ArrayList<Integer>();
 						coordenada.add(x);
@@ -215,10 +221,10 @@ public class Juego implements Initializable {
 						y=y+1;
 					}
 			}
-		
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
 						|| barco.equals(fragata2_2)) {
-				
+				//Calcula las coordenadas de las casillas que va a ocupar el barco
 				for(int i = 0; i<1;i=i+1) {
 					
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
@@ -229,11 +235,11 @@ public class Juego implements Initializable {
 				
 				}
 			}
-			
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			else if (barco.equals(submarino1) || barco.equals(submarino2) || 
 				barco.equals(submarino3) || barco.equals(submarino1_2) || barco.equals(submarino2_2) || 
 				barco.equals(submarino3_2)) {
-				
+				//Calcula las coordenadas de las casillas que va a ocupar el barco
 				for(int i = 0; i<3;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
@@ -248,7 +254,9 @@ public class Juego implements Initializable {
 		
 		
 		else if (orientacion.contentEquals("Vertical")) {
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			if (barco.equals(portaAviones) || barco.equals(portaAviones_2)) {
+				//Calcula las coordenadas de las casillas que va a ocupar el barco
 				for(int i = 0; i<4;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
@@ -258,10 +266,11 @@ public class Juego implements Initializable {
 					x=x+1;
 				}
 			}
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			else if (barco.equals(destructor1) || barco.equals(destructro2) || 
 					barco.equals(desctructor3) || barco.equals(destructor1_2) || barco.equals(destructro2_2) || 
 					barco.equals(desctructor3_2)) {
-				
+				//Calcula las coordenadas de las casillas que va a ocupar el barco
 				for(int i = 0; i<2;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
@@ -271,9 +280,10 @@ public class Juego implements Initializable {
 					x=x+1;
 				}
 			}
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			else if (barco.equals(fragata1) || barco.equals(fragata2) || barco.equals(fragata1_2) 
 					|| barco.equals(fragata2_2)) {
-				
+				//Calcula las coordenadas de las casillas que va a ocupar el barco
 				for(int i = 0; i<1;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
@@ -283,10 +293,11 @@ public class Juego implements Initializable {
 					x=x+1;
 				}
 			}
+			//Condiciona el tipo de barco, ya que cada uno tien una talla distinta 
 			else if (barco.equals(submarino1) || barco.equals(submarino2) || 
 					barco.equals(submarino3) || barco.equals(submarino1_2) || barco.equals(submarino2_2) || 
 					barco.equals(submarino3_2)) {
-				
+				//Calcula las coordenadas de las casillas que va a ocupar el barco
 				for(int i = 0; i<3;i=i+1) {
 					ArrayList<Integer> coordenada = new ArrayList<Integer>();
 					coordenada.add(x);
@@ -298,49 +309,58 @@ public class Juego implements Initializable {
 			}
 			
 		}
-		
+		//Esta es la lista que contiene las listas de las coordendas que va a ocupar 
 		return coordenadas;
 	}
-	
+	/* Función oficial encargada de colocar las figuras.
+	 * Recibe como argumento todos los combobox provenientes de la intefaz */
 	public void ponerImagen(GridPane tablero, ComboBox<ImageView> botonBarco, ComboBox<String> EjeX,
 		ComboBox<String> EjeY, ComboBox<String> posicion, Tablero matriz, Jugador jugador) {
-		
+		//Lista que contien todas las casillas y sus datos 
 		ArrayList<Casilla> Casillas = matriz.getCasillas();
 		Casilla casilla;
+		//Asigna los valores que provienen del comboBox
 		ImageView barcoSeleccionado = botonBarco.getSelectionModel().getSelectedItem();
-		
+		// Convierte en un entero los valores obtenidos del comboBox 
 		int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
 		int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
 		String orientacion = posicion.getSelectionModel().getSelectedItem().toString();
-		
+		//lista que recibe como resultado el valor de retorno de la función "obtenerCoordenadas"
 		ArrayList<ArrayList<Integer>> CoordenadasOcupadas = obtenerCoordenadas(ejey, ejex, orientacion, barcoSeleccionado);
+		// Atributo Booleano que permite verificar la viabilidad de la inserción de la imagen
 		viabilidad = posicionViable(ejey, ejex, orientacion, barcoSeleccionado);
-		
+		//Condicional de viabilidad de la inserción 
 		if (viabilidad == false) {
 			System.out.println("El barco no cabe en esa casilla");
 		}else {
+			// Condicional de orientación 
 			if(orientacion.equals("Vertical")) {
 				
 				rotarFicha(barcoSeleccionado);
 		
 			}
+			//Para cada una de las casillas del tablero 
 			for(int i=0; i<100; i=i+1) {
+				//Toma una casilla específica
 				casilla = Casillas.get(i);
+				//Para cada una de las coordenadas que ocupa el barco.
 				for(int k = 0; k< CoordenadasOcupadas.size();k=k+1) {
-						
+					//Si, uno de los elementos de la lista de coordenadas corresponde a la casilla actual.	
 					if(casilla.getCoordenadas().toString().equals(CoordenadasOcupadas.get(k).toString())) {
+						//Verifica el estado para evitar poner un barco en una posición que ya esté ocupada.
 						if(casilla.isEstado()) {
-							
+							//Al ser este el caso de la inserción de una barco en posición vertical, se realiza la rotación
 							if(barcoSeleccionado.getRotate() == 90) {
 								barcoSeleccionado.setRotate(barcoSeleccionado.getRotate() - 90);
 							}
-							
+							//En caso de que la casilla ya esté ocupada
 							barcoSeleccionado.setTranslateX(0);
 							barcoSeleccionado.setTranslateY(0);
 							System.out.println("Ya hay un barco");
 							return;
 						}
 						else {
+							//Se coloca el barco y se imprimen sus coordenadas
 							System.out.println("=========================");
 							botonBarco.getItems().remove(barcoSeleccionado);
 							casilla.setEstado(); casilla.setTipo();
@@ -352,11 +372,11 @@ public class Juego implements Initializable {
 			}
 			
 			bandera++;
-			
+			//Se agrega al tablero el movimiento. 
 			tablero.add(barcoSeleccionado, ejex, ejey);
 			barcoSeleccionado.toBack();
 			
-			
+			//Cambia el proceso de colocasión de barcos al segundo judador 
 			if(bandera == 9 && turno == 0) {
 	
 				botonBarco2.setDisable(false); botonBarco2.setOpacity(1);
@@ -375,9 +395,9 @@ public class Juego implements Initializable {
 				
 				return;
 			}
-			
+			//Culmina el proceso de inserción. 
 			if(bandera == 18) {
-				
+				//Esconde los elementos de interfaz que no se van necesitar el siguiente proceso
 				atacar1.setOpacity(1); botonBarco.setDisable(true); botonBarco.setOpacity(0);
 				
 				guardarPosicion1.setDisable(true); guardarPosicion1.setOpacity(0);
@@ -400,22 +420,26 @@ public class Juego implements Initializable {
 		
 	}
 	
-
+	
+	
+	//Proceso coordinación del ataque y sus turnos
 	@FXML
 	public void Atacar() {
 		if(turno == 0) {
+			//Convierte los atributos de entrada
 			int ejex = Integer.parseInt(EjeX.getSelectionModel().getSelectedItem().toString())-1;
 			int ejey = Integer.parseInt(EjeY.getSelectionModel().getSelectedItem().toString())-1;
+			//Ejecuta el turno del jugador 2 
 			turno = jugador1.Atacar(ejex, ejey, matriz2, tablero2, turno);
 			
 			if(turno == 1) {
 				return;
 			}
-			
+			//Esconde el boton de atacar para el jugador que ya hizo su movimiento
 			atacar1.setOpacity(0);
 			atacar2.setOpacity(1);
 			
-			
+			//Confirma si el jugador ya ganó
 			if(jugador2.verificarPerdida() == 21) {
 				System.out.println("gano1");
 				cerrarJuego();
@@ -427,24 +451,27 @@ public class Juego implements Initializable {
 		
 		int ejex = Integer.parseInt(EjeX1.getSelectionModel().getSelectedItem().toString())-1;
 		int ejey = Integer.parseInt(EjeY1.getSelectionModel().getSelectedItem().toString())-1;
+		//Ejecuta el turno del jugador 1
 		turno = jugador2.Atacar(ejex, ejey, matriz1, tablero1, turno);
 		
 		if(turno == 0) {
 			return;
 		}
-		
+		//Esconde el boton de atacar para el jugador que ya hizo su movimiento
 		atacar2.setOpacity(0);
 		atacar1.setOpacity(1);
 
-		
-			if(jugador1.verificarPerdida() == 21) {
-			System.out.println("gano2");
-			cerrarJuego();
+		//Confirma si el jugador ya ganó
+		if(jugador1.verificarPerdida() == 21) {
+		System.out.println("gano2");
+		cerrarJuego();
 			
-			}
+		}
 		return;
 	}
-		
+	
+	
+	//Termina la ejecuion del juego
 	public void cerrarJuego() {
 		menu.getJuego().close();
 		
@@ -458,7 +485,7 @@ public class Juego implements Initializable {
 	
 
 	
-	
+	//Se encarga de adjudicar los valores necesarios para el funcionamiento del controlador 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
@@ -503,8 +530,9 @@ public class Juego implements Initializable {
 		matriz2.setCoordenadas();
 		
 	}
-
+	//Verifica si colocar un elemento en dicha posición es factible y queda dentro del GridPane
 	public boolean posicionViable(int x, int y, String orientacion, ImageView barco) {
+		//Verifica que la posición seleccionada por el usario sea menor al limite respectivo al tipo de barco
 		if (orientacion.contentEquals("Horizontal")) {
 			if ((barco.equals(portaAviones) || barco.equals(portaAviones_2)) && y >=7) {
 				return false;

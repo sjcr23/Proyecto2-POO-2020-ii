@@ -34,11 +34,12 @@ public class MenuInicio implements Initializable {
 	private void nuevaPartida(ActionEvent evento) {
 		
 	}
-	
+	//presenta la interfaz correspondiente a juego nuevo
 	@FXML
     void crearPartida(ActionEvent evento) {
 
         try {
+        	//Establece la escena de colocar barcos y juego 
             FXMLLoader ventanaNuevaPartida = new FXMLLoader(getClass().getResource("Juego.fxml"));
             Parent root = (Parent) ventanaNuevaPartida.load();
             Juego escenaJuego = (Juego) ventanaNuevaPartida.getController();

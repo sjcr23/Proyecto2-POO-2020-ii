@@ -3,12 +3,16 @@ package application;
 import java.util.ArrayList;
 
 public class Casilla {
-	
+	//Atributos 
 	private String tipo;
 	private ArrayList<Integer> coordenadas;
+	//Este estado define si esta ocupada o desocupada la casilla
 	private boolean Estado;
+	//Este estado define si la casilla ha sido golpeada con un disparo o no 
 	private boolean estadoGolpe;
 	
+	
+	//Constructor 
 	public Casilla() {
 
 		this.tipo = "Agua";
@@ -16,6 +20,8 @@ public class Casilla {
 		this.Estado = false;
 		this.estadoGolpe = false;
 	}
+	
+	//Métodos de Set y get de los atributos
 	
 	
 	public void setCoordenada(int x, int y) {
